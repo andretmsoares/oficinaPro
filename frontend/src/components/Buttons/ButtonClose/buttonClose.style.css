@@ -1,0 +1,9 @@
+.close {
+  background-color: #dd1d1d;
+  color: #ffffff;
+  border: none;
+}
+
+.view-os-footer .close {
+  background-color: #0f172a;
+}

@@ -1,0 +1,15 @@
+.add {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.add:hover {
+  background-color: #1e293b;
+}
+
+.view-os-section-title .add {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
