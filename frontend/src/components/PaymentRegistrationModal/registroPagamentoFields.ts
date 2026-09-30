@@ -1,0 +1,41 @@
+import { defineFields } from "../EntityForm/types";
+import { formatCurrencyDisplay } from "../../utils/formatters";
+import type { MeioPagamento } from "../../enums/MeioPagamento";
+
+export type RegistroPagamentoFormData = {
+  valorPago: number;
+  meioPagamento: MeioPagamento;
+};
+
+export function createRegistroPagamentoFields(saldoRestante: number) {
+  return defineFields<RegistroPagamentoFormData>([
+    {
+      name: "valorPago",
+      label: "Valor Pago",
+      placeholder: "Digite o valor pago",
+      type: "currency",
+      required: true,
+      validate: (value) => {
+        const valor = Number(value);
+        if (valor > saldoRestante) {
+          return `Valor máximo permitido: ${formatCurrencyDisplay(saldoRestante)}`;
+        }
+        return undefined;
+      },
+    },
+    {
+      name: "meioPagamento",
+      label: "Meio de Pagamento",
+      placeholder: "Selecione o meio de pagamento usado",
+      type: "select",
+      required: true,
+      options: [
+        { label: "Dinheiro", value: "DINHEIRO" },
+        { label: "PIX", value: "PIX" },
+        { label: "Cartão de Crédito", value: "CARTAO_CREDITO" },
+        { label: "Cartão de Débito", value: "CARTAO_DEBITO" },
+        { label: "Cheque", value: "CHEQUE" },
+      ],
+    },
+  ]);
+}

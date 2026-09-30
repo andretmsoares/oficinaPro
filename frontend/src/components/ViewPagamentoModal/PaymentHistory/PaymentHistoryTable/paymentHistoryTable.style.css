@@ -1,0 +1,73 @@
+.payment-table-wrapper {
+  overflow-x: auto;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.payment-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 13px;
+}
+
+.payment-table th {
+  padding: 11px 14px;
+
+  background: #f9fafb;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.payment-table td {
+  padding: 12px 14px;
+
+  color: #374151;
+
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.payment-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.payment-table-value {
+  color: #111827 !important;
+  font-weight: 600;
+}
+
+.payment-table-actions {
+  width: 60px;
+  text-align: center;
+}
+
+.payment-delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #dc2626;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.payment-delete-button:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
